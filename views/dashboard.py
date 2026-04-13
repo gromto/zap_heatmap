@@ -44,7 +44,7 @@ def render():
     # =========================
     # SIDEBAR
     # =========================
-    st.sidebar.header("Filters")
+    st.sidebar.header("Filtros")
 
     zonas = sorted(df["zona_corrigida"].dropna().unique())
 
@@ -84,9 +84,9 @@ def render():
 
     c1, c2, c3 = st.columns(3)
 
-    c1.metric("Avg Price/m²", f"R$ {int(df['avg_preco_m2'].mean()):,}")
-    c2.metric("Median Price", f"R$ {int(df['median_preco'].median()):,}")
-    c3.metric("Listings", f"{int(df['total_anuncios'].sum()):,}")
+    c1.metric("Preço médio m²", f"R$ {int(df['avg_preco_m2'].mean()):,}")
+    c2.metric("Preço mediano", f"R$ {int(df['median_preco'].median()):,}")
+    c3.metric("Anúncios", f"{int(df['total_anuncios'].sum()):,}")
 
     # =========================
     # DISTRIBUTION
@@ -146,8 +146,8 @@ def render():
     "bairro": "Bairro",
     "zona_corrigida": "Zona",
     "total_anuncios": "Anúncios",
-    "avg_preco_m2": "Preço médio m² (R$)",
-    "median_preco": "Preço mediano (R$)",
+    "avg_preco_m2": "Preço médio m²",
+    "median_preco": "Preço mediano",
     "median_area": "Área mediana (m²)",
     "avg_quartos": "Quartos",
     "avg_banheiros": "Banheiros",
